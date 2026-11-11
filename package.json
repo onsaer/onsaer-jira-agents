@@ -1,0 +1,27 @@
+{
+  "name": "jira-agents",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pipeline à deux agents LangChain.js : ticket Jira -> spécifications techniques -> code + tests",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "tsx --env-file=.env src/main.ts",
+    "gc": "tsx --env-file=.env src/gc.ts",
+    "test": "tsx --test src/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/anthropic": "^1.0.0",
+    "@langchain/core": "^1.0.0",
+    "langchain": "^1.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
